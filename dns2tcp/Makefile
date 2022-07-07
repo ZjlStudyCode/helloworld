@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-License-Identifier: GPL-3.0-only test
 #
 # Copyright (C) 2022 ImmortalWrt.org
 
