@@ -64,12 +64,7 @@ jobs:
           CHANGES=$(git diff --diff-filter=d --name-only origin/$BRANCH)
 
           for ROOT in $PKG_ROOTS; do
-            for CHANGE in $CHANGES; do
-              if [[ "$CHANGE" == "$ROOT"* ]]; then
-                PACKAGES+=$(echo "$ROOT" | sed -e 's@\(.*\)/@\1 @')
-                break
-              fi
-            done
+            PACKAGES+=$(echo "$ROOT" | sed -e 's@\(.*\)/@\1 @')
           done
           # fallback to test packages if nothing explicitly changes this is
           # should run if other mechanics in packages.git changed
